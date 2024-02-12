@@ -114,7 +114,7 @@ export const ShopContextProvider = (props) => {
   const fetchProduct = async (itemId: string): Promise<IProduct | null> => {
     try {
       const product = await axios.get(
-        `https://ossosmexidos-server.onrender.com/${itemId}`,
+        `https://ossosmexidos-server.onrender.com/product/${itemId}`,
         {
           headers,
         }
