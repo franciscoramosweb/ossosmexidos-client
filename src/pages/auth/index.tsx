@@ -99,7 +99,7 @@ const Login = ({ setIsLogin }) => {
     try {
       event.preventDefault();
 
-      const result = await axios.post("https://ossosmexidos-server.onrender.com/login", {
+      const result = await axios.post("https://ossosmexidos-server.onrender.com/user/login", {
         username,
         password,
       });
