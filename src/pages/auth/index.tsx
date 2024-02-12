@@ -40,7 +40,7 @@ const Register = ({ setIsLogin }) => {
     try {
       event.preventDefault();
 
-      await axios.post("http://localhost:3001/user/register", {
+      await axios.post("https://ossosmexidos-server.onrender.com/user/register", {
         username,
         password,
       });
@@ -99,7 +99,7 @@ const Login = ({ setIsLogin }) => {
     try {
       event.preventDefault();
 
-      const result = await axios.post("http://localhost:3001/user/login", {
+      const result = await axios.post("https://ossosmexidos-server.onrender.com/login", {
         username,
         password,
       });
