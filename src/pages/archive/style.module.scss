@@ -1,0 +1,21 @@
+.imageGrid {
+  margin: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  gap: 10px; /* Gap between grid items */
+}
+
+.imageGrid img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures images maintain aspect ratio and cover the container */
+  height: 100%;
+  width: 100%;
+
+}
+
+.spotifyPlayer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

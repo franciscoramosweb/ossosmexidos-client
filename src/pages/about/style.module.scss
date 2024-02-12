@@ -1,0 +1,105 @@
+.main {
+  color: white;
+
+  .aboutTitle {
+    margin-top: -5vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      transform: scaleX(1.1);
+      letter-spacing: -36px;
+      text-align: center;
+      width: 70vw;
+      font-size: 15em;
+      margin: 0px;
+      padding: 0;
+    }
+  }
+
+  h2 {
+    font-size: 5em;
+  }
+
+  .imageContainer {
+    rotate: 15deg;
+    width: 400px;
+    height: 400px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .introSection {
+    height: 100vh;
+    gap: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .introDescription {
+      p {
+        font-size: 1.7em;
+
+        text-align: start;
+        width: 30vw;
+      }
+    }
+  }
+
+  .peopleSection {
+    height: 200vh;
+    .person {
+      margin-top: 100px;
+
+      gap: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7em;
+      width: auto;
+
+      .personDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        h1 {
+          font-size: 1em;
+        }
+        h2 {
+          font-size: 1em;
+        }
+
+        p {
+          text-align: start;
+          width: 30vw;
+        }
+      }
+    }
+  }
+
+  .comeShakeSection {
+    height: 100vh;
+
+    .textBlock {
+      font-size: 1.7em;
+      margin: 0 200px;
+    }
+  }
+
+  .contactSection {
+    height: 60vh;
+
+    .textBlock {
+      font-size: 1.7em;
+      margin: 0 200px;
+    }
+  }
+}

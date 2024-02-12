@@ -1,0 +1,125 @@
+.header {
+  width: auto;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 4;
+  top: 0;
+  padding: 20px 0;
+  pointer-events: auto; /* Allow pointer events for the header itself */
+  text-decoration: none;
+  color: blue;
+
+  .cartIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -25px;
+      right: -25px;
+      position: absolute;
+      font-size: 14px;
+      background-color: red;
+      color: yellow;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+  
+    }
+  }
+
+
+  .title{
+    
+    margin: 0;
+    top: 25px;
+    left: 20px;
+    position: absolute;
+    color: yellow;
+  }
+
+  .menuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu {
+    width: 480px;
+    height: 650px;
+    background-color: yellow;
+    border-radius: 25px;
+    position: relative;
+  }
+
+  a {
+    color: blue;
+  }
+
+  &.active {
+    a {
+      color: white;
+    }
+    color: white;
+  }
+
+  .navOptions {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .burger {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: blue;
+        position: relative;
+        transition: transform 0.3s;
+      }
+      &::after {
+        top: -5px;
+      }
+
+      &::before {
+        top: 5px;
+      }
+    }
+
+    .burgerActive {
+      &::after {
+        transform: rotate(45deg);
+        top: -1px;
+        background-color: blue;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        top: 0px;
+        background-color: blue;
+      }
+    }
+  }
+}
