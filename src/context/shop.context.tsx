@@ -73,7 +73,7 @@ export const ShopContextProvider = (props) => {
   const fetchAvailableMoney = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3001/user/available-money/${localStorage.getItem(
+        `https://ossosmexidos-server.onrender.com/user/available-money/${localStorage.getItem(
           "userID"
         )}`,
         { headers }
@@ -88,7 +88,7 @@ export const ShopContextProvider = (props) => {
   const fetchPurchasedItems = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3001/product/purchased-items/${localStorage.getItem(
+        `https://ossosmexidos-server.onrender.com/product/purchased-items/${localStorage.getItem(
           "userID"
         )}`,
         { headers }
@@ -102,7 +102,7 @@ export const ShopContextProvider = (props) => {
 
   const fetchProducts = async () => {
     try {
-      const fetchedProducts = await axios.get("http://localhost:3001/product", {
+      const fetchedProducts = await axios.get("https://ossosmexidos-server.onrender.com/product", {
         headers,
       });
       setProducts(fetchedProducts.data.products);
@@ -114,7 +114,7 @@ export const ShopContextProvider = (props) => {
   const fetchProduct = async (itemId: string): Promise<IProduct | null> => {
     try {
       const product = await axios.get(
-        `http://localhost:3001/product/${itemId}`,
+        `https://ossosmexidos-server.onrender.com/${itemId}`,
         {
           headers,
         }
@@ -177,7 +177,7 @@ export const ShopContextProvider = (props) => {
     const body = { customerID: localStorage.getItem("userID"), cartItems };
 
     try {
-      await axios.post("http://localhost:3001/product/checkout", body, {
+      await axios.post("https://ossosmexidos-server.onrender.com/product/checkout", body, {
         headers: headers,
       });
 
